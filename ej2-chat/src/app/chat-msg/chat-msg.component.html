@@ -1,0 +1,9 @@
+<br>
+<li class="list-group-item">
+    <strong>{{msg.author}}</strong>
+    {{msg.text}}<br>
+    <i>{{msg.time}}</i><br>
+    <i>{{msg.votes}} votos</i>
+    <button style="float: right;" type="button" class="btn btn-sm btn-outline-info"
+            (click)="voteUp()">Vote</button>
+</li>

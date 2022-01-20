@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="row">
+        <ul class="list-group">
+            <ng-container *ngFor="let msj of getMessages()">
+                <app-chat-msg [msg]="msj"
+                              (voteEvent)="voteUpMsg($event)">
+                </app-chat-msg>
+            </ng-container>
+        </ul>
+    </div>
+</div>

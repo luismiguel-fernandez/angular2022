@@ -1,0 +1,13 @@
+<h2>Haz clic en uno de los siguientes alumnos para ver detalles</h2>
+
+<ul class="list-group">
+    <li class="list-group-item"
+        *ngFor="let alumno of getAlumnos()"
+        [class.active]="alumno === selectedAlumno"
+        (click)="onSelect(alumno)">
+            {{alumno}}
+    </li>
+</ul>
+
+<app-alumno-detalles [alumnoParam]="selectedAlumno"
+                     (nameChanged)="changeName($event)"></app-alumno-detalles>
