@@ -30,7 +30,9 @@ export class ListadoAlumnosComponent implements OnInit {
   }
 
   changeName($event:string) {
-    this.alumnos.push($event)
+    let posicion = this.alumnos.indexOf(this.selectedAlumno)
+    this.selectedAlumno = $event
+    this.alumnos[posicion] = $event
   }
 
 }

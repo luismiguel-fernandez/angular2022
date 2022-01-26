@@ -1,10 +1,9 @@
 <div *ngIf="alumnoParam">
 <h2>{{alumnoParam}} details</h2>
-<div><span>id: </span>1</div>
 <div>
   <label>name:
     {{alumnoParam}}
   </label>
-  <input #aNewName type="text"><button (click)="updateName(aNewName.value)">Actualizar nombre</button>
+  <input #aNewName type="text"><button (click)="updateName(aNewName.value);aNewName.value=''">Actualizar nombre</button>
 </div>
 </div>
