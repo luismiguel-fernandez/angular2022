@@ -8,9 +8,12 @@
     </div>
   </div>
   <div class="row row-cols-md-3">
-    <app-car-card *ngFor="let car of getCars()" [car]="car"
-      (carBought)="reduceStock(car)">
-    </app-car-card>
+    <ng-container *ngFor="let car of getCars()">
+      <app-car-card [car]="car"
+                    *ngIf="!filtrar || (filtrar && car.stock)"
+                    (carBought)="reduceStock(car)">
+      </app-car-card>
+    </ng-container>
   </div>
   <div class="row"><p></p></div>
   <div class="row row-cols-md-2">
