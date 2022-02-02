@@ -7,11 +7,11 @@ import { EventEmitter } from '@angular/core';
   styleUrls: ['./alumno-detalles.component.css']
 })
 export class AlumnoDetallesComponent implements OnInit {
-  @Input() alumnoParam:string
+  @Input() alumnoParam:any
   @Output() nameChanged = new EventEmitter<string>()
 
   constructor() {
-    this.alumnoParam = ""
+
    }
 
   ngOnInit(): void {

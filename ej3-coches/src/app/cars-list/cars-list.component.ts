@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BdCarsService } from '../bd-cars.service';
+import { Car } from './Car';
 
 @Component({
   selector: 'app-cars-list',
@@ -23,6 +24,18 @@ export class CarsListComponent implements OnInit {
 
   cbChanged() {
     this.filtrar = !this.filtrar
+  }
+
+  reduceStock(car:Car) {
+    this.bdCars.reduceStock(car)
+  }
+
+  recuperarCoches() {
+    this.bdCars.populateCars()
+  }
+
+  recuperarStock() {
+    this.bdCars.enableStock()
   }
 
 }

@@ -5,7 +5,7 @@
         *ngFor="let alumno of getAlumnos()"
         [class.active]="alumno === selectedAlumno"
         (click)="onSelect(alumno)">
-            {{alumno}}
+            {{alumno.name}}
     </li>
 </ul>
 

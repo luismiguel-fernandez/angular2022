@@ -3,6 +3,21 @@
   <div class="card-body">
     <h5 class="card-title">{{car.maker}} {{car.model}}</h5>
     <p class="card-text">{{car.price}} €</p>
-    <a href="#" class="btn btn-primary">Buy</a>
+    <p class="card-text">Stock:
+      <span class="badge bg-success rounded-pill"
+        [ngClass]="{'bg-danger': !car.stock}">
+        {{car.stock}}
+      </span>
+    </p>
+
+    <button (click)="buyCar()"
+            class="btn btn-primary"
+            [ngClass]="{
+                'btn-danger':!car.stock,
+                'disabled':!car.stock
+              }">
+            {{car.stock?'Comprar':'Sin stock'}}
+    </button>
+    <button class="btn btn-danger" (click)="eliminarCoche()">X</button>
   </div>
 </div>

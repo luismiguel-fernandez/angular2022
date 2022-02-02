@@ -8,13 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class ListadoAlumnosComponent implements OnInit {
 
   private alumnos;
-  selectedAlumno: string;
+  selectedAlumno: any;
 
   constructor() {
     this.alumnos = new Array()
-    this.alumnos.push("Fulanito")
-    this.alumnos.push("Menganita")
-    this.alumnos.push("Jaimito")
+    this.alumnos.push( {name: "Fulanito", age: "17"} )
+    this.alumnos.push( {name: "Menganita", age: "18"} )
+    this.alumnos.push( {name: "Jaimito", age: "19"} )
     this.selectedAlumno = "";
   }
 
@@ -31,8 +31,8 @@ export class ListadoAlumnosComponent implements OnInit {
 
   changeName($event:string) {
     let posicion = this.alumnos.indexOf(this.selectedAlumno)
-    this.selectedAlumno = $event
-    this.alumnos[posicion] = $event
+    this.selectedAlumno.name = $event
+    this.alumnos[posicion].name = $event
   }
 
 }

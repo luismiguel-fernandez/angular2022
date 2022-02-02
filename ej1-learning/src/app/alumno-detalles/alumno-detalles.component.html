@@ -1,9 +1,19 @@
 <div *ngIf="alumnoParam">
-<h2>{{alumnoParam}} details</h2>
-<div>
-  <label>name:
-    {{alumnoParam}}
-  </label>
-  <input #aNewName type="text"><button (click)="updateName(aNewName.value);aNewName.value=''">Actualizar nombre</button>
-</div>
+  <h2>Detalles de {{alumnoParam.name}}</h2>
+  <div class="card" style="width: 10rem;">
+    <img src="data:image/png;base64,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" class="card-img-top" alt="...">
+    <div class="card-body">
+      <p class="card-text">
+        {{alumnoParam.name}}
+        <span class="badge bg-primary rounded-pill">{{alumnoParam.age}}</span>
+      </p>
+    </div>
+  </div>
+  <div>
+    <label>Escribe un nuevo nombre para {{alumnoParam.name}} </label>
+    <br>
+    <input #aNewName type="text">
+
+    <button (click)="updateName(aNewName.value);aNewName.value=''">Actualizar nombre</button>
+  </div>
 </div>

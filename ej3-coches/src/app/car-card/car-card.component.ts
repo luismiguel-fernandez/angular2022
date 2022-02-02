@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
+import { BdCarsService } from '../bd-cars.service';
 import { Car } from '../cars-list/Car';
 
 @Component({
@@ -8,10 +9,19 @@ import { Car } from '../cars-list/Car';
 })
 export class CarCardComponent implements OnInit {
   @Input() car:Car
+  @Output() carBought = new EventEmitter<Car>()
 
-  constructor() { }
+  constructor(private bdCars:BdCarsService) { }
 
   ngOnInit(): void {
   }
 
+  buyCar() {
+    console.log("buyCar")
+    this.carBought.emit(this.car)
+  }
+
+  eliminarCoche() {
+    this.bdCars.removeCar(this.car)
+  }
 }
