@@ -1,9 +1,11 @@
-<br>
-<li class="list-group-item">
-    <strong>{{msg.author}}</strong>
-    {{msg.text}}<br>
-    <i>{{msg.time}}</i><br>
-    <i>{{msg.votes}} votos</i>
-    <button style="float: right;" type="button" class="btn btn-sm btn-outline-info"
-            (click)="voteUp()">Vote</button>
-</li>
+<div class="mensaje-autor">
+  <div class="fecha">{{msg.time}}</div>
+  <img src="https://w7.pngwing.com/pngs/980/886/png-transparent-male-portrait-avatar-computer-icons-icon-design-avatar-flat-face-icon-people-head-cartoon.png" alt="" class="foto">
+  <div class="flecha-izquierda"></div>
+  <div class="contenido">
+      <strong>{{msg.author}}</strong>
+      {{msg.text}}
+      <br><i>{{msg.votes}} votos</i>
+      <button (click)="voteUp()" class="btn btn-warning" style="float: right;">Votar</button>
+  </div>
+</div>
