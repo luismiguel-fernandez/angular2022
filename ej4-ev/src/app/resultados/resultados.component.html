@@ -1,0 +1,34 @@
+<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+  <button class="btn btn-info btn-sm" (click)="cambiarVista()">CAMBIAR VISTA</button>
+</div>
+
+<ng-container *ngIf="estaCargando()">
+<div class="text-center m-5">
+  <strong>Loading... </strong>
+  <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status" aria-hidden="true"></div>
+</div>
+</ng-container>
+
+<div *ngIf="esVistaTarjeta()" class="row row-cols-md-5">
+  <!-- RELLENAR CON UN LISTADO DE TODOS LOS MODELOS -->
+  <ng-container *ngFor="let coche of getCoches()">
+    <app-coche-tarjeta [car]="coche"></app-coche-tarjeta>
+  </ng-container>
+</div>
+
+<div *ngIf="!esVistaTarjeta()" class="container">
+  <!-- RELLENAR CON UN LISTADO DE TODOS LOS MODELOS -->
+  <ng-container *ngFor="let coche of getCoches()">
+    <div class="row">
+      <div class="col col-lg-3">
+        <img src="assets/{{coche.imagen}}" class="card-img-top">
+      </div>
+      <div class="col col-lg-6">
+        <h5 class="card-title">{{coche.nombre}}</h5>
+      </div>
+      <div class="col col-lg-3">
+        <p class="card-text">{{coche.precio}} €</p>
+      </div>
+    </div>
+  </ng-container>
+</div>
