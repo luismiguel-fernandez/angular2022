@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BdCochesService } from '../bd-coches.service';
+import { ParamsFiltrosService } from '../params-filtros.service';
 
 @Component({
   selector: 'app-resultados',
@@ -12,7 +13,7 @@ export class ResultadosComponent implements OnInit {
   private cargando:boolean = true
   private vistaBigCard = true
 
-  constructor(private bdCoches:BdCochesService) {
+  constructor(private bdCoches:BdCochesService, private filtros:ParamsFiltrosService) {
     //this.coches = new Array()
   }
 
@@ -37,5 +38,15 @@ export class ResultadosComponent implements OnInit {
 
   getCoches() {
       return this.coches
+  }
+
+  getPattern() {
+    return this.filtros.getPattern()
+  }
+  getMaker() {
+    return this.filtros.getMaker()
+  }
+  getTech() {
+    return this.filtros.getTech()
   }
 }

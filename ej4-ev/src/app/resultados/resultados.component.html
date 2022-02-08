@@ -11,7 +11,7 @@
 
 <div *ngIf="esVistaTarjeta()" class="row row-cols-md-5">
   <!-- RELLENAR CON UN LISTADO DE TODOS LOS MODELOS -->
-  <ng-container *ngFor="let coche of getCoches()">
+  <ng-container *ngFor="let coche of getCoches() | patron:getPattern() | fabricante:getMaker() | tecnologia:getTech()">
     <app-coche-tarjeta [car]="coche"></app-coche-tarjeta>
   </ng-container>
 </div>

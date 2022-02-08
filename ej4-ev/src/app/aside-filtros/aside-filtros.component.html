@@ -5,7 +5,9 @@
   <tbody>
     <tr><td>
       <div class="form-group">
-        <input type="text" class="form-control" id="modelo" placeholder="Nombre del modelo">
+        <input type="text" class="form-control" id="modelo" placeholder="Nombre del modelo"
+               #pattern (keyup)="setNewPattern(pattern.value)"
+        >
       </div>
     </td></tr>
   </tbody>
@@ -18,7 +20,7 @@
     <tr><td>
       <div class="form-group">
         <label for="fabList">Elige un fabricante</label>
-        <select class="form-control" id="fabList">
+        <select #maker class="form-control" id="fabList" (change)="setNewMaker(maker.value)">
           <option value="0">(Elige un fabricante)</option>
           <!-- RELLENAR CON UN LISTADO DE TODOS LOS FABRICANTES -->
           <ng-container *ngFor="let fab of getFabricantes()">
@@ -45,7 +47,7 @@
     <tr><td>
       <div class="form-group">
         <label for="techList">Elige una tecnología</label>
-        <select class="form-control" id="techList">
+        <select #tech class="form-control" id="techList" (change)="setNewTech(tech.value)">
           <option value="0">(Elige una tecnología)</option>
           <!-- RELLENAR CON UN LISTADO DE TODOS LAS TECNOLOGÍAS -->
           <ng-container *ngFor="let tec of getTecnologias()">
