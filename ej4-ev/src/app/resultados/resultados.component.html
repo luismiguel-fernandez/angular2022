@@ -18,7 +18,7 @@
 
 <div *ngIf="!esVistaTarjeta()" class="container">
   <!-- RELLENAR CON UN LISTADO DE TODOS LOS MODELOS -->
-  <ng-container *ngFor="let coche of getCoches()">
+  <ng-container *ngFor="let coche of getCoches() | patron:getPattern() | fabricante:getMaker() | tecnologia:getTech()">
     <div class="row">
       <div class="col col-lg-3">
         <img src="assets/{{coche.imagen}}" class="card-img-top">

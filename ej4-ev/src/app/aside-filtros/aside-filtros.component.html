@@ -1,69 +1,79 @@
-<table class="table table-striped">
-  <thead class="thead-light">
-    <tr><th>MODELO</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>
-      <div class="form-group">
-        <input type="text" class="form-control" id="modelo" placeholder="Nombre del modelo"
-               #pattern (keyup)="setNewPattern(pattern.value)"
-        >
-      </div>
-    </td></tr>
-  </tbody>
-</table>
-<table id="fabFilters" class="table table-striped">
-  <thead class="thead-light">
-    <tr><th>FABRICANTE</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>
-      <div class="form-group">
-        <label for="fabList">Elige un fabricante</label>
-        <select #maker class="form-control" id="fabList" (change)="setNewMaker(maker.value)">
-          <option value="0">(Elige un fabricante)</option>
-          <!-- RELLENAR CON UN LISTADO DE TODOS LOS FABRICANTES -->
-          <ng-container *ngFor="let fab of getFabricantes()">
-            <option value="{{fab.id}}">{{fab.text}}</option>
-          </ng-container>
-        </select>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="fab1" checked>
-        <label class="form-check-label" for="fab1">Fabricante1</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="fab2" checked>
-        <label class="form-check-label" for="fab2">Fabricante2</label>
-      </div>
-    </td></tr>
-  </tbody>
-</table>
-<table id="tecFilters" class="table table-striped">
-  <thead class="thead-light">
-    <tr><th>TECNOLOGÍA</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>
-      <div class="form-group">
-        <label for="techList">Elige una tecnología</label>
-        <select #tech class="form-control" id="techList" (change)="setNewTech(tech.value)">
-          <option value="0">(Elige una tecnología)</option>
-          <!-- RELLENAR CON UN LISTADO DE TODOS LAS TECNOLOGÍAS -->
-          <ng-container *ngFor="let tec of getTecnologias()">
-            <option value="{{tec.id}}">{{tec.text}}</option>
-          </ng-container>
-        </select>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="tec1" checked>
-        <label class="form-check-label" for="tec1">Tecnología1</label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="" id="tec2" checked>
-        <label class="form-check-label" for="tec2">Tecnología2</label>
-      </div>
-    </td></tr>
-  </tbody>
-</table>
-<button class="btn btn-primary" id="resetFilters">Borrar filtros</button>
+<div class="container">
+	<form #asideForm="ngForm">
+    <table class="table table-striped">
+      <thead class="thead-light">
+        <tr><th>MODELO</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>
+          <div class="form-group">
+            <input type="text" class="form-control" id="modelo" placeholder="Nombre del modelo"
+                  #pattern (keyup)="setNewPattern(pattern.value)"
+            >
+          </div>
+        </td></tr>
+      </tbody>
+    </table>
+    <table id="fabFilters" class="table table-striped">
+      <thead class="thead-light">
+        <tr><th>FABRICANTE</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>
+          <div class="form-group">
+            <label for="fabList">Elige un fabricante</label>
+            <select #maker class="form-control" id="fabList" (change)="setNewMaker(maker.value)">
+              <option value="0">(Elige un fabricante)</option>
+              <!-- RELLENAR CON UN LISTADO DE TODOS LOS FABRICANTES -->
+              <ng-container *ngFor="let fab of getFabricantes()">
+                <option value="{{fab.id}}">{{fab.text}}</option>
+              </ng-container>
+            </select>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="fab1" checked>
+            <label class="form-check-label" for="fab1">Fabricante1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="fab2" checked>
+            <label class="form-check-label" for="fab2">Fabricante2</label>
+          </div>
+        </td></tr>
+      </tbody>
+    </table>
+    <table id="tecFilters" class="table table-striped">
+      <thead class="thead-light">
+        <tr><th>TECNOLOGÍA</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>
+          <div class="form-group">
+            <label for="techList">Elige una tecnología</label>
+            <select #tech class="form-control" id="techList" (change)="setNewTech(tech.value)">
+              <option value="0">(Elige una tecnología)</option>
+              <!-- RELLENAR CON UN LISTADO DE TODOS LAS TECNOLOGÍAS -->
+              <ng-container *ngFor="let tec of getTecnologias()">
+                <option value="{{tec.id}}">{{tec.text}}</option>
+              </ng-container>
+            </select>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="tec1" checked>
+            <label class="form-check-label" for="tec1">Tecnología1</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="tec2" checked>
+            <label class="form-check-label" for="tec2">Tecnología2</label>
+          </div>
+        </td></tr>
+      </tbody>
+    </table>
+    <button class="btn btn-primary" id="resetFilters"
+      (click)="pattern.value='';
+               maker.value='0';
+               tech.value='0';
+               resetFilters();">
+        Borrar filtros
+    </button>
+  </form>
+</div>

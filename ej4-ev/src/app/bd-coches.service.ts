@@ -6,21 +6,22 @@ import { Injectable } from '@angular/core';
 })
 export class BdCochesService {
 
-  //private coches:any
+  private cars:any
+  private loading:boolean = true
   private urlBase:string = "https://my-json-server.typicode.com/luismiguel-fernandez/angular2022/"
 
   constructor(private http:HttpClient) {
+    this.http.get(this.urlBase + "coches").subscribe(
+      (response:any) => {
+        this.cars = response
+        this.loading = false
+      }
+    )
   }
 
-  getCoches() {
-    return this.http.get(this.urlBase + "coches")
-  }
-
-  getFabricantes() {
-    return this.http.get(this.urlBase+"fabricantes")
-  }
-
-  getTecnologias() {
-    return this.http.get(this.urlBase+"tecnologias")
-  }
+  getCarById(id:string) { return this.cars?this.cars.find( (car:any) => car.id == id):{} }
+  getCars() { return this.cars }
+  getMakers() { return this.http.get(this.urlBase+"fabricantes") }
+  getTechnologies() { return this.http.get(this.urlBase+"tecnologias") }
+  isLoading() { return this.loading }
 }
