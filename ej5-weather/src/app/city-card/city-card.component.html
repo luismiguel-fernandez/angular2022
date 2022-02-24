@@ -1,0 +1,16 @@
+<ng-container *ngIf="city.name">
+
+  <div class="card text-center bg-light mb-2 mr-2">
+    <img *ngIf="city.imagen" src="assets/{{city.imagen}}" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{city.name}}</h5>
+      <p class="card-text">{{city.sys.country | countryFromCode}}</p>
+      <p class="card-text">{{city.main.temp | celsius }} ºC</p>
+      <p>
+        <app-fav-icon [city]="city"></app-fav-icon>
+        <app-city-at-home-icon [city]="city"></app-city-at-home-icon>
+      </p>
+    </div>
+  </div>
+
+</ng-container>

@@ -1,0 +1,7 @@
+<h4>Tus ciudades favoritas</h4>
+<div class="row row-cols-md-5">
+  <ng-container *ngFor="let city of getFavs()">
+    <app-city-card [city]="city"></app-city-card>
+  </ng-container>
+</div>
+
