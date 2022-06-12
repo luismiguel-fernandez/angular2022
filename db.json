@@ -37,6 +37,6 @@
 		{ "id": 27, "cat": 6, "nombre": "Corsair iCUE 220T RGB Airflow Cristal Templado USB 3.0 Negra", "precio": 76.98, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/22/222587/a1.jpg" },
 		{ "id": 28, "cat": 6, "nombre": "Cooler Master MasterBox MB520 RGB Cristal Templado USB 3.0", "precio": 96.99, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/33/332125/1770-cooler-master-masterbox-mb520-rgb-cristal-templado-usb-32.jpg" },
 		{ "id": 29, "cat": 6, "nombre": "Nox Infinity SIGMA ARGB Cristal Templado USB 3.0", "precio": 58.00, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/17/176010/5441.jpg" },
-		{ "id": 30, "cat": 6, "nombre": "Lian Li PC-O11 Dynamic Cristal Templado USB 3.1 Blanca", "precio": 129.98, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/25/251201/a2.jpg" },
+		{ "id": 30, "cat": 6, "nombre": "Lian Li PC-O11 Dynamic Cristal Templado USB 3.1 Blanca", "precio": 129.98, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/25/251201/a2.jpg" }
 	]
 }
