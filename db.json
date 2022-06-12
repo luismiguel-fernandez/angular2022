@@ -7,6 +7,13 @@
     { "id": 5, "nombre": "Fuentes de alimentación" },
     { "id": 6, "nombre": "Cajas" }
   ],
+  "fabricantes" : [
+	{ "id": 1, "nombre": "AMD" },
+	{ "id": 2, "nombre": "Intel" },
+	{ "id": 3, "nombre": "MSI" },
+	{ "id": 4, "nombre": "Gigabyte" },
+	{ "id": 5, "nombre": "Kingston" }
+  ],
   "articulos" : [
 		{ "id": 1, "cat": 1, "nombre": "AMD Ryzen 5 3600", "precio": 199.90, "stock": false, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/21/213019/5-3.jpg" },
   	{ "id": 2, "cat": 1, "nombre": "AMD Ryzen 5 5600X 3.7GHz", "precio": 233.99, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/32/328475/1101-amd-ryzen-5-5600x-37ghz.jpg" },
