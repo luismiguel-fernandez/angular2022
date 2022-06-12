@@ -42,7 +42,7 @@
 	{ "id": 12, "cat": 2, "fab": 4, "nombre": "Gigabyte B550 AORUS ELITE V2", "precio": 137.99, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/33/332816/1263-gigabyte-b550-aorus-elite-v2.jpg" },
 	{ "id": 13, "cat": 2, "fab": 8, "nombre": "Asus TUF GAMING B450-PLUS II", "precio": 93.99, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/33/332454/1332-asus-tuf-gaming-b450-plus-ii.jpg" },
 	{ "id": 14, "cat": 3, "fab": 6, "nombre": "Corsair Vengeance RGB Pro Optimizado AMD DDR4 3200 16GB 2x8GB CL16", "precio": 95.99, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/27/279642/corsair-vengeance-rgb-pro-optimizado-amd-ddr4-3200-16gb-2x8gb-cl16-opiniones.jpg" },
-	{ "id": 15, "cat": 4, "fab": 9, "nombre": "Zotac Gaming GeForce RTX 3080 Trinity LHR 10GB GDDR6X", "precio": 859.90, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/51/513719/190-zotac-gaming-geforce-rtx-3080-trinity-lhr-10gb-gddr6x.jpg" },
+	{ "id": 15, "cat": 4, "fab": 9, "nombre": "Zotac Gaming GeForce RTX 3080 Trinity LHR 10GB GDDR6X", "precio": 859.90, "stock": false, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/51/513719/190-zotac-gaming-geforce-rtx-3080-trinity-lhr-10gb-gddr6x.jpg" },
 	{ "id": 16, "cat": 4, "fab": 3, "nombre": "MSI GeForce GTX 1660 SUPER Ventus XS OC 6GB GDDR6", "precio": 289.89, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/24/245154/6.jpg" },
 	{ "id": 17, "cat": 4, "fab": 10, "nombre": "XFX Speedster SWFT 210 AMD Radeon RX 6600 XT 8GB GDDR6", "precio": 399.89, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/51/513369/1393-xfx-speedster-swft-210-amd-radeon-rx-6600-xt-8gb-gddr6.jpg" },
 	{ "id": 18, "cat": 4, "fab": 4, "nombre": "Gigabyte GeForce GTX 1660 SUPER OC 6GB GDDR6", "precio": 339.99, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/24/245161/2019102908460796f7a47f882387bf8717e5e317abe67778-src.jpg" },
@@ -57,6 +57,6 @@
 	{ "id": 27, "cat": 6, "fab": 6, "nombre": "Corsair iCUE 220T RGB Airflow Cristal Templado USB 3.0 Negra", "precio": 76.98, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/22/222587/a1.jpg" },
 	{ "id": 28, "cat": 6, "fab": 16, "nombre": "Cooler Master MasterBox MB520 RGB Cristal Templado USB 3.0", "precio": 96.99, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/33/332125/1770-cooler-master-masterbox-mb520-rgb-cristal-templado-usb-32.jpg" },
 	{ "id": 29, "cat": 6, "fab": 17, "nombre": "Nox Infinity SIGMA ARGB Cristal Templado USB 3.0", "precio": 58.00, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/17/176010/5441.jpg" },
-	{ "id": 30, "cat": 6, "fab": 18, "nombre": "Lian Li PC-O11 Dynamic Cristal Templado USB 3.1 Blanca", "precio": 129.98, "stock": true, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/25/251201/a2.jpg" }
+	{ "id": 30, "cat": 6, "fab": 18, "nombre": "Lian Li PC-O11 Dynamic Cristal Templado USB 3.1 Blanca", "precio": 129.98, "stock": false, "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/25/251201/a2.jpg" }
 	]
 }
